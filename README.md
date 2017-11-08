@@ -2,6 +2,8 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/retowyss/swiss-public-transport-r/branch/master/graph/badge.svg)](https://codecov.io/github/retowyss/swiss-public-transport-r?branch=master)
 
 
+
+
 # Swiss public transport API R client
 
 This is an R client to the [Swiss public transport API](http://transport.opendata.ch/). 
