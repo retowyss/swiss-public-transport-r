@@ -1,5 +1,5 @@
-[![Travis-CI Build Status](https://travis-ci.org/retowyss/swiss-public-transport-r?.svg?branch=master)](https://travis-ci.org/retowyss/swiss-public-transport-r)
-[![Coverage Status](https://img.shields.io/codecov/c/github/retowyss/swiss-public-transport-r?/master.svg)](https://codecov.io/github/retowyss/swiss-public-transport-r?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/retowyss/swiss-public-transport-r.svg?branch=master)](https://travis-ci.org/retowyss/swiss-public-transport-r)
+[![Coverage Status](https://img.shields.io/codecov/c/github/retowyss/swiss-public-transport-r/branch/master/graph/badge.svg)](https://codecov.io/github/retowyss/swiss-public-transport-r?branch=master)
 
 
 # Swiss public transport API R client
