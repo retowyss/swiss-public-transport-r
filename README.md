@@ -6,7 +6,7 @@
 
 # Swiss public transport API R client
 
-This is an R client to the [Swiss public transport API](http://transport.opendata.ch/). 
+This is an R client for the [Swiss public transport API](http://transport.opendata.ch/). 
 
 ```
 devtools::install_github(retowyss/swiss-public-transport-r)
@@ -19,6 +19,3 @@ tapi("locations", query = "Bern")
 tapi("connections", from = "Bern", to = "Burgdorf")
 tapi("stationboard", station = "Burgdorf")
 ```
-
-* [Examples and documentation](//retowyss.github.io/swiss-public-transport-r)
-
