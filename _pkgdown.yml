@@ -1,0 +1,5 @@
+url: //retowyss.github.io/swiss-public-transport-r
+
+template:
+  params:
+    bootswatch: united
