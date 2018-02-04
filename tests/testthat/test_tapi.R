@@ -2,9 +2,9 @@ library(SwissPublicTransport)
 
 context("Tests")
 
-test_that("tapi works", {
-  x <- tapi("locations", query = "Bern")
-  y <- tapi(
+test_that("transport_api works", {
+  x <- transport_api("locations", query = "Bern")
+  y <- transport_api(
     "connections",
     from = "Bern",
     to = "Burgdorf",
@@ -14,8 +14,8 @@ test_that("tapi works", {
   expect_equal(y, y)
 })
 
-test_that("tapi error", {
-  expect_error(tapi(
+test_that("transport_api error", {
+  expect_error(transport_api(
     "connections",
     from = "Bern",
     to = "Burgdorf",

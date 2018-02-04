@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>License • SwissPublicTransport</title>
+<title>Swiss public transport API — transport_api • SwissPublicTransport</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
 
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="jquery.sticky-kit.min.js"></script>
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
+<script src="../pkgdown.js"></script>
   
   
 <!-- mathjax -->
@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <div class="container template-license">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -47,18 +47,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">SwissPublicTransport</a>
+      <a class="navbar-brand" href="../index.html">SwissPublicTransport</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       
@@ -78,19 +78,56 @@
       </header>
 
       <div class="row">
-  <div class="contents col-md-12">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>License</h1>
+    <h1>Swiss public transport API</h1>
     </div>
 
-<pre>YEAR: 2017 - 2018
-COPYRIGHT HOLDER: Reto Wyss
-</pre>
+    
+    <p>Swiss public transport API</p>
+    
+
+    <pre class="usage"><span class='fu'>transport_api</span>(<span class='no'>.endpoint</span>, <span class='no'>...</span>, <span class='kw'>.protocol</span> <span class='kw'>=</span> <span class='st'>"https"</span>, <span class='kw'>.version</span> <span class='kw'>=</span> <span class='st'>"v1"</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>.endpoint</th>
+      <td><p>path to api endpoint - there are three endpoints available:
+locations, connections, and stationboard.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>named parameters will be translated into a request query.
+For the full documentation see <a href='https://transport.opendata.ch/docs.html'>https://transport.opendata.ch/docs.html</a></p></td>
+    </tr>
+    <tr>
+      <th>.protocol</th>
+      <td><p>protocol to be used</p></td>
+    </tr>
+    <tr>
+      <th>.version</th>
+      <td><p>api version</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>list of dataframes</p>
+    
 
   </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
 
+  </div>
 </div>
-
 
       <footer>
       <div class="copyright">

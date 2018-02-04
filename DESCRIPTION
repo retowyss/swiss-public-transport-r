@@ -1,7 +1,7 @@
 Package: SwissPublicTransport
 Type: Package
 Title: Swiss Public Transport
-Version: 0.0.0.9000
+Version: 0.0.1.0000
 Authors@R: person("Reto", "Wyss", email = "reto.wyss.ch@gmail.com",
                   role = c("aut", "cre"))
 Description: This is a client for the Swiss public transport API.  
@@ -14,7 +14,8 @@ Imports:
     jsonlite,
     purrr,
     stringr,
-    glue
+    glue,
+    dplyr
 LazyData: true
 RoxygenNote: 6.0.1
 Suggests: 

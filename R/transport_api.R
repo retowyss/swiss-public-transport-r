@@ -1,14 +1,13 @@
 #' Swiss public transport API
 #'
-#' @param endpoint path to api endpoint - there are three endpoints available:
+#' @param .endpoint path to api endpoint - there are three endpoints available:
 #'     locations, connections, and stationboard.
-#' @param ... named parameters will be translated into a request query
+#' @param ... named parameters will be translated into a request query.
+#'     For the full documentation see \url{https://transport.opendata.ch/docs.html}
 #' @param .protocol protocol to be used
-#' @param .url base url
 #' @param .version api version
 #'
 #' @return list of dataframes
-#' @export
 #'
 #' @importFrom purrr map map_if imap is_list is_scalar_atomic %>%
 #' @importFrom glue glue collapse
@@ -16,18 +15,13 @@
 #' @importFrom jsonlite fromJSON flatten
 #' @importFrom stringr str_replace_all
 #'
-#' @examples
 #'
-#' tapi("locations", query = "Bern")
-#' tapi("connections", from = "Bern", to = "Burgdorf")
-#' tapi("stationboard", station = "Burgdorf")
-#'
-tapi <- function(endpoint,
+transport_api <- function(.endpoint,
                  ...,
                  .protocol = "https",
-                 .url = "transport.opendata.ch",
                  .version = "v1") {
-  glue("{.protocol}://{.url}/{.version}/{endpoint}?{dots2req(...)}") %>%
+  stopifnot(.protocol %in% c("http", "https"))
+  glue("{.protocol}://transport.opendata.ch/{.version}/{.endpoint}?{dots2req(...)}") %>%
     httpGET() %>%
     fromJSON() %>%
     map_if(is.data.frame, flatten)
@@ -50,3 +44,4 @@ parse_dot <- function(x, y) {
     stop()
   }
 }
+
