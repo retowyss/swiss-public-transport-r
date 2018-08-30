@@ -12,7 +12,9 @@ This is an R client for the [Swiss public transport API](http://transport.openda
 devtools::install_github(retowyss/swiss-public-transport-r)
 ```
 
-The package makes three functions available. One for each of the API-enpoints.
+The package makes three functions available. One for each of the API-enpoints. 
+
+Functions return flat tables instead of json.
 
 ```r
 locations(query = "Bern")
