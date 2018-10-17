@@ -9,8 +9,6 @@
 #' @return the connections as a dataframe
 #' @export
 #'
-#' @importFrom dplyr select_
-#'
 #' @examples
 #' connections(from = "Bern", to = "Burgdorf")
 #' connections(from = "Basel", to = "Bern")

@@ -8,14 +8,7 @@
 #' @param .version api version
 #'
 #' @return list of dataframes
-#'
-#' @importFrom purrr map map_if imap is_list is_scalar_atomic %>%
-#' @importFrom glue glue collapse
-#' @importFrom RCurl httpGET
-#' @importFrom jsonlite fromJSON flatten
-#' @importFrom stringr str_replace_all
-#'
-#'
+#' 
 transport_api <- function(.endpoint,
                  ...,
                  .protocol = "https",
@@ -30,7 +23,7 @@ transport_api <- function(.endpoint,
 dots2req <- function(...) {
   list(...) %>%
     imap(parse_dot) %>%
-    collapse(sep = "&") %>%
+    glue_collapse(sep = "&") %>%
     str_replace_all(" ", "%20")
 }
 
@@ -39,7 +32,7 @@ parse_dot <- function(x, y) {
     glue("{y}={x}")
   } else if (is_list(x)) {
     map(x, ~ glue("{y}[]={.}")) %>%
-      collapse(sep = "&")
+      glue_collapse(sep = "&")
   } else {
     stop()
   }

@@ -10,8 +10,6 @@
 #' @return the stationboard as a dataframe
 #' @export
 #'
-#' @importFrom dplyr select_
-#'
 #' @examples
 #' stationboard(station = "Burgdorf")
 #' stationboard(id = 8508005)

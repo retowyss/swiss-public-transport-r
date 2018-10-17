@@ -10,8 +10,6 @@
 #' @return the locations as a dataframe
 #' @export
 #'
-#' @importFrom dplyr select_
-#'
 #' @examples
 #' # You need to specify either query or x and y
 #' locations(query = "Bern")
